@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import cv from "../data/cv.json";
+import { site } from "../config/site";
+---
+
+<Layout
+  title={`${site.name} — CV`}
+  description={`Resume and experience of ${site.name}, ${site.role}.`}
+>
+  <div class="no-print mb-8 flex flex-wrap items-center justify-between gap-4">
+    <div>
+      <h1 class="font-display text-3xl font-bold text-white sm:text-4xl">Curriculum Vitae</h1>
+      <p class="mt-2 text-slate-400">HTML resume with downloadable PDF</p>
+    </div>
+    <a href="/cv/Sourav_Akib_Sarkar.pdf" class="btn-primary" download>
+      Download PDF
+    </a>
+  </div>
+
+  <article class="card space-y-10">
+    <header class="border-b border-surface-border pb-8">
+      <h2 class="font-display text-3xl font-bold text-white">{site.name}</h2>
+      <div class="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-300">
+        <a href={`mailto:${site.email}`} class="hover:text-accent-muted">{site.email}</a>
+        <span>{site.phone}</span>
+        <span>WhatsApp: {site.whatsapp}</span>
+        <a href={site.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-accent-muted">LinkedIn</a>
+        <a href={site.github} target="_blank" rel="noopener noreferrer" class="hover:text-accent-muted">GitHub</a>
+      </div>
+    </header>
+
+    <section>
+      <Section title="Summary" />
+      <p class="prose-muted text-sm">{cv.summary}</p>
+    </section>
+
+    <section>
+      <Section title="Skills" />
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          cv.skills.map((group) => (
+            <div>
+              <h3 class="mb-2 text-sm font-semibold text-white">{group.category}</h3>
+              <p class="text-sm text-slate-300">{group.items.join(" · ")}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <Section title="Education" />
+      <div class="space-y-4">
+        {
+          cv.education.map((item) => (
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+              <div>
+                <h3 class="font-semibold text-white">{item.institution}</h3>
+                <p class="text-sm text-slate-300">{item.degree}</p>
+              </div>
+              <p class="text-sm text-slate-400">{item.date}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <Section title="Work Experience" />
+      <div class="space-y-8">
+        {
+          cv.experience.map((item) => (
+            <div>
+              <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <div>
+                  <h3 class="font-semibold text-white">{item.company}</h3>
+                  <p class="text-sm text-accent-muted">{item.role}</p>
+                </div>
+                <p class="text-sm text-slate-400">{item.date}</p>
+              </div>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                {item.bullets.map((bullet) => (
+                  <li class="flex gap-3">
+                    <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <Section title="Projects" />
+      <div class="space-y-6">
+        {
+          cv.projects.map((project) => (
+            <div>
+              <div class="flex flex-wrap items-baseline gap-2">
+                <h3 class="font-semibold text-white">{project.title}</h3>
+                {project.note && <span class="text-xs text-slate-400">({project.note})</span>}
+              </div>
+              <p class="mt-1 text-xs text-accent-muted">{project.tags.join(" · ")}</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-300">
+                {project.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section>
+      <Section title="Achievements" />
+      <ul class="space-y-2 text-sm text-slate-300">
+        {cv.achievements.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section>
+      <Section title="Languages" />
+      <ul class="space-y-2 text-sm text-slate-300">
+        {cv.languages.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    <section>
+      <Section title="References" />
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          cv.references.map((ref) => (
+            <div class="rounded-xl border border-surface-border p-4">
+              <h3 class="font-semibold text-white">{ref.name}</h3>
+              <p class="text-sm text-accent-muted">{ref.title}</p>
+              <p class="mt-2 text-sm text-slate-300">{ref.organization}</p>
+              <p class="mt-2 text-sm text-slate-400">
+                <a href={`mailto:${ref.email}`} class="hover:text-accent-muted">{ref.email}</a>
+                {ref.phone && <span> · {ref.phone}</span>}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </article>
+</Layout>

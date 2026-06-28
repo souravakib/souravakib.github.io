@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import cv from "../data/cv.json";
+import { site } from "../config/site";
+---
+
+<Layout title={`${site.name} — Home`}>
+  <section class="mb-14">
+    <p class="mb-3 text-sm font-medium uppercase tracking-widest text-accent-muted">
+      {site.role} · {site.location}
+    </p>
+    <h1 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+      {site.name}
+    </h1>
+    <p class="prose-muted mt-6 max-w-3xl text-lg">{cv.summary}</p>
+    <div class="no-print mt-8 flex flex-wrap gap-3">
+      <a href="/cv" class="btn-primary">View CV</a>
+      <a href="/projects" class="btn-secondary">See Projects</a>
+      <a href="/availability" class="btn-secondary">Book a Meeting</a>
+    </div>
+  </section>
+
+  <div class="grid gap-8 lg:grid-cols-2">
+    <section class="card">
+      <Section title="Highlights" />
+      <ul class="space-y-3 text-sm text-slate-300">
+        {
+          cv.achievements.map((item) => (
+            <li class="flex gap-3">
+              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              <span>{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="card">
+      <Section title="Core Skills" />
+      <div class="space-y-4">
+        {
+          cv.skills.slice(0, 2).map((group) => (
+            <div>
+              <h3 class="mb-2 text-sm font-semibold text-white">{group.category}</h3>
+              <div class="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span class="rounded-full border border-surface-border px-3 py-1 text-xs text-slate-300">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+
+  <section class="card mt-8">
+    <Section title="Contact" />
+    <div class="grid gap-4 sm:grid-cols-2">
+      <a href={`mailto:${site.email}`} class="rounded-xl border border-surface-border p-4 transition hover:border-accent/40">
+        <p class="text-xs uppercase tracking-wide text-slate-400">Email</p>
+        <p class="mt-1 text-sm text-white">{site.email}</p>
+      </a>
+      <a
+        href={site.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-xl border border-surface-border p-4 transition hover:border-accent/40"
+      >
+        <p class="text-xs uppercase tracking-wide text-slate-400">GitHub</p>
+        <p class="mt-1 text-sm text-white">github.com/souravakib</p>
+      </a>
+      <a
+        href={site.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-xl border border-surface-border p-4 transition hover:border-accent/40"
+      >
+        <p class="text-xs uppercase tracking-wide text-slate-400">LinkedIn</p>
+        <p class="mt-1 text-sm text-white">linkedin.com/in/souravakib</p>
+      </a>
+      <a
+        href={`https://wa.me/${site.whatsapp.replace(/[^0-9]/g, "")}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-xl border border-surface-border p-4 transition hover:border-accent/40"
+      >
+        <p class="text-xs uppercase tracking-wide text-slate-400">WhatsApp</p>
+        <p class="mt-1 text-sm text-white">{site.whatsapp}</p>
+      </a>
+    </div>
+  </section>
+</Layout>

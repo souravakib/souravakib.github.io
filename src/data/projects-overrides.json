@@ -1,0 +1,14 @@
+{
+  "TheGalahCompressionModel": {
+    "description": "Unsupervised representation learning for GALAH stellar spectra — MSc dissertation research in astrophysics and deep learning."
+  },
+  "DRB_AML": {
+    "description": "Vision Transformer-based diabetic retinopathy detection with clinical-grade evaluation metrics."
+  },
+  "Melenoma.Ai": {
+    "description": "Deep learning pipeline for melanoma detection from dermoscopic images."
+  },
+  "DetectingSkinCancerMelenoma": {
+    "description": "Computer vision models for early skin cancer detection using PyTorch."
+  }
+}

@@ -1,0 +1,44 @@
+---
+import { site } from "../config/site";
+
+const { pathname } = Astro.url;
+---
+
+<nav class="sticky top-0 z-50 border-b border-surface-border/80 bg-surface/90 backdrop-blur-md">
+  <div class="container-page flex h-16 items-center justify-between gap-4">
+    <a
+      href="/"
+      class="font-display text-lg font-semibold tracking-tight text-white transition hover:text-accent-muted"
+    >
+      {site.name.split(" ")[0]}
+      <span class="text-accent-muted">{site.name.split(" ").slice(1).join(" ")}</span>
+    </a>
+
+    <ul class="flex items-center gap-1 sm:gap-2">
+      {
+        site.nav.map((item) => {
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.href);
+          return (
+            <li>
+              <a
+                href={item.href}
+                class:list={[
+                  "rounded-lg px-3 py-2 text-sm font-medium transition",
+                  isActive
+                    ? "bg-accent/15 text-accent-muted"
+                    : "text-slate-300 hover:bg-surface-raised hover:text-white",
+                ]}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</nav>

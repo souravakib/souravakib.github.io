@@ -1,0 +1,74 @@
+---
+import Nav from "../components/Nav.astro";
+import { site } from "../config/site";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, site.url).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <main class="container-page py-10 sm:py-14">
+      <slot />
+    </main>
+    <footer class="border-t border-surface-border bg-surface-raised/40 py-8">
+      <div class="container-page flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-slate-400">
+          © {new Date().getFullYear()} {site.name}. {site.role}.
+        </p>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a
+            href={site.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-slate-300 transition hover:text-accent-muted"
+          >
+            GitHub
+          </a>
+          <a
+            href={site.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-slate-300 transition hover:text-accent-muted"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={`mailto:${site.email}`}
+            class="text-slate-300 transition hover:text-accent-muted"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

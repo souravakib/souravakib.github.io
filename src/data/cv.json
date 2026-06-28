@@ -1,0 +1,195 @@
+{
+  "summary": "AI Researcher with hands-on experience in developing and refining machine learning models across diverse domains, including medical imaging and astrophysics. Additionally, an experienced Project Manager and Content Team Lead with over five years of experience managing remote teams, driving operational efficiency, and leading data-driven content strategies to deliver high-quality results. Proven ability to bridge research and industry practices by integrating AI-based insights into real-world applications.",
+  "skills": [
+    {
+      "category": "Machine Learning & AI",
+      "items": [
+        "Deep Learning",
+        "Neural Networks",
+        "Computer Vision",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-Learn"
+      ]
+    },
+    {
+      "category": "Programming & Development",
+      "items": [
+        "Python",
+        "C++",
+        "Java",
+        "SQL",
+        "JavaScript",
+        "Spring Boot",
+        "ReactJS",
+        "Django"
+      ]
+    },
+    {
+      "category": "Data Science & Analytics",
+      "items": [
+        "Numpy",
+        "Pandas",
+        "Matplotlib",
+        "Data Preprocessing",
+        "Model Evaluation"
+      ]
+    },
+    {
+      "category": "Cloud & Tools",
+      "items": ["AWS", "Firebase", "Git", "RestAPIs", "Arduino IDE"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Surrey",
+      "degree": "MSc Artificial Intelligence",
+      "date": "February 2026"
+    },
+    {
+      "institution": "University Putra Malaysia",
+      "degree": "Bachelors of Computer Science, Computer Systems",
+      "date": "Apr 2024"
+    },
+    {
+      "institution": "British Standard School",
+      "degree": "A-Levels: Math, Physics, Chemistry",
+      "date": "Jun 2019"
+    }
+  ],
+  "experience": [
+    {
+      "company": "American International University-Bangladesh (AIUB)",
+      "role": "Lecturer, Department of Computer Science",
+      "date": "May 2026 – Present",
+      "bullets": [
+        "Conducting undergraduate lectures and laboratory sessions in subjects including Statistics, Operating Systems, Python Programming, Artificial Intelligence/Machine Learning, and Data Structures.",
+        "Developing course materials, lecture slides, lab tasks, and examination guidelines to ensure effective academic delivery and student engagement."
+      ]
+    },
+    {
+      "company": "App-Concept",
+      "role": "Project Manager, SEO And Content Lead",
+      "date": "May 2024 – May 2026",
+      "bullets": [
+        "Oversaw end-to-end project management, from ideation to deployment. Collaborating with developers and designers to define technical requirements and integrate AI models into production environments.",
+        "Served as the SEO and lead content creator, managing projects, focusing on enhancing content strategies for improved search engine rankings."
+      ]
+    },
+    {
+      "company": "Invisible, Mercor, Outlier",
+      "role": "Human Data Annotator",
+      "date": "Jun 2024 – May 2026",
+      "bullets": [
+        "Created and implemented detailed training guidelines for AI models, with a focus on improving data accuracy, consistency, and overall model performance.",
+        "Contributed to the annotation and refinement of large datasets, leading to improvements in model precision and reliability."
+      ]
+    },
+    {
+      "company": "Malaysian Institution of Ageing",
+      "role": "Research Assistant Intern",
+      "date": "Jul 2023 - Feb 2024",
+      "bullets": [
+        "Collaborated with a multidisciplinary team to integrate psychological insights and technical expertise in the creation of the simulation environment",
+        "Implemented a streamlined data collection process for behavioral metrics during simulated driving tests, resulting in a 30% reduction in data discrepancies and a 25% improvement in overall test efficiency"
+      ]
+    },
+    {
+      "company": "Content Writer",
+      "role": "Team Leader",
+      "date": "Jan 2021 - May 2024",
+      "bullets": [
+        "Content writer with three years of experience, having produced over 1000 articles and blog posts.",
+        "Collaborated with over 30 clients across industries such as technology, healthcare, and education.",
+        "Developed content strategies that increased reader engagement and grew social media followings by up to 25%."
+      ]
+    },
+    {
+      "company": "British Standard School",
+      "role": "Mathematics Teaching Assistant",
+      "date": "Sep 2017 - Dec 2019",
+      "bullets": [
+        "Served as an assistant teacher at a high school, directly supporting 150+ students across various math courses.",
+        "Conducted interactive teaching techniques in mathematics that increased student test scores.",
+        "Provided targeted tutoring and academic support, contributing to improvement in students' overall performance."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Unsupervised Representation for Stellar Data",
+      "tags": ["Python", "PyTorch", "Unsupervised Learning"],
+      "note": "Paper submitted",
+      "bullets": [
+        "Applied unsupervised representation learning methods to analyze stellar data, successfully grouping stars by common properties to derive meaningful insights into galactic evolution and stellar composition."
+      ]
+    },
+    {
+      "title": "Enhancing Diabetic Retinopathy Detection via Vision Transformers",
+      "tags": ["Python", "PyTorch", "Vision Transformers"],
+      "bullets": [
+        "Evaluated and enhanced a Vision Transformer-based model to automate Diabetic Retinopathy (DR) grading, achieving superior performance (F1-score: 0.736, AUC: 0.933) and demonstrating the clinical potential of transformer architectures in medical diagnostics."
+      ]
+    },
+    {
+      "title": "Development of Simulated Driving Environment for Fatigue Detection in Drivers",
+      "tags": ["Arduino IDE", "Python", "ML"],
+      "bullets": [
+        "A project utilizing Arduino IDE and Python to develop sensor-driven fatigue detection algorithms, with the potential to enhance safety through real-time monitoring."
+      ]
+    },
+    {
+      "title": "Detecting Skin Cancer With Machine Learning",
+      "tags": ["Python", "PyTorch", "Computer Vision"],
+      "bullets": [
+        "Implemented deep learning model in Python with PyTorch to analyze medical images for early skin cancer detection, showcasing the power of AI in healthcare."
+      ]
+    },
+    {
+      "title": "IoT-Enabled Intelligent Stick for Visually Impaired People",
+      "tags": ["Arduino IDE", "IoT", "Embedded Systems"],
+      "bullets": [
+        "Employed Arduino IDE for sensor integration and data processing, enabling the creation of an IoT-enabled assistive stick that enhances mobility and safety for the visually impaired."
+      ]
+    },
+    {
+      "title": "Library Database System",
+      "tags": ["Spring Boot", "MySQL", "Web Development"],
+      "bullets": [
+        "The technical aspects encompass the development of a library database system using Spring Boot, MySQL for database management, and HTML for the user interface, streamlining library resource management."
+      ]
+    },
+    {
+      "title": "Classmate",
+      "tags": ["Figma", "Django", "Android Studio"],
+      "note": "A mobile application for an educational platform",
+      "bullets": [
+        "The project involved technical work in app design using Figma, web development with Django, and mobile app development through Android Studio to create a platform that fosters educational collaboration."
+      ]
+    }
+  ],
+  "achievements": [
+    "Bronze Medal – Computer Systems Final Year Project",
+    "Honorable Mention – 2017 Paper for Progress (International Essay Competition)",
+    "Daily Star High Achievers Award Winner – IGCSE"
+  ],
+  "languages": [
+    "English (Proficient, IELTS: 7.5)",
+    "Bengali (Native)"
+  ],
+  "references": [
+    {
+      "name": "Dr. Md Mostafa Kamal Sarker",
+      "title": "Assistant Research Professor",
+      "organization": "Precision Breast Cancer Institute, Department of Oncology | University of Cambridge",
+      "email": "mmks3@cam.ac.uk",
+      "phone": "+44 (0)7902833970"
+    },
+    {
+      "name": "Dr Payel Das",
+      "title": "Senior Research Fellow",
+      "organization": "Surrey Space Centre, School of Mathematics and Physics | University of Surrey",
+      "email": "p.das@surrey.ac.uk"
+    }
+  ]
+}
