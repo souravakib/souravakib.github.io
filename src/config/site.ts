@@ -11,10 +11,8 @@ export const site = {
   phone: "+8801842846321",
   github: "https://github.com/souravakib",
   linkedin: "https://www.linkedin.com/in/sourav-akib-sarkar-853887157/",
-  calendlyUrl: import.meta.env.PUBLIC_CALENDLY_URL ?? "",
-  calendlyEmbedUrl:
-    import.meta.env.PUBLIC_CALENDLY_EMBED_URL ??
-    "https://calendly.com/souravakib",
+  calendlyUrl: "https://calendly.com/s-souravakib",
+  calendlyEmbedUrl: "https://calendly.com/s-souravakib?hide_landing_page=1"
   nav: [
     { href: "/", label: "Home" },
     { href: "/cv", label: "CV" },
