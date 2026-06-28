@@ -12,7 +12,7 @@ export const site = {
   github: "https://github.com/souravakib",
   linkedin: "https://www.linkedin.com/in/sourav-akib-sarkar-853887157/",
   calendlyUrl: "https://calendly.com/s-souravakib",
-  calendlyEmbedUrl: "https://calendly.com/s-souravakib?hide_landing_page=1"
+  calendlyEmbedUrl: "https://calendly.com/s-souravakib?hide_landing_page=1",
   nav: [
     { href: "/", label: "Home" },
     { href: "/cv", label: "CV" },
