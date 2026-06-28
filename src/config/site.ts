@@ -10,7 +10,7 @@ export const site = {
   whatsapp: "+601116581370",
   phone: "+8801842846321",
   github: "https://github.com/souravakib",
-  linkedin: "https://www.linkedin.com/in/souravakib",
+  linkedin: "https://www.linkedin.com/in/sourav-akib-sarkar-853887157/",
   calendlyUrl: import.meta.env.PUBLIC_CALENDLY_URL ?? "",
   calendlyEmbedUrl:
     import.meta.env.PUBLIC_CALENDLY_EMBED_URL ??
